@@ -12,7 +12,7 @@ import {TbGridDots} from 'react-icons/tb'
 const Navbar = () => {
   return (
     <div>
-      <div className="header flex">
+      <div className="header">
         <div className="logoDiv">
           <h3 className="logo">Wonder</h3>
         </div>
