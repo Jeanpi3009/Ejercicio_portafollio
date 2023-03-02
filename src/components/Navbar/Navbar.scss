@@ -1,12 +1,12 @@
-:root{
---primaryColor:#3ab3a7;
---primaryHover:#0c988a;
---secondaryColor:#059789;
---secHoverColor:#253b53;
---greyColor:#f7f7f7;
+:root {
+--primaryColor: #3ab3a7;
+--primaryHover: #0c988a;
+--secondaryColor: #059789;
+--secHoverColor: #253b53;
+--greyColor: #f7f7f7;
 }
 
-.header{
+.header {
     position: fixed;
     display: flex;
     align-items: center;
@@ -16,16 +16,18 @@
     background: var(--primaryColor);
     z-index: 2000;
 
-    .logoDiv{
-        .logo{
-            color:var(--greyColor);
+    .logoDiv {
+        .logo {
+            color: var(--greyColor);
             font-weight: 600;
             cursor: pointer;
         }
     }
 
-    @media screen and (max-width: 768px){
-        .menuDiv{
+
+    @media screen and (max-width: 768px) {
+        
+        .menuDiv {
             background: var(--primaryColor);
             position: absolute;
             width: 80%;
@@ -37,6 +39,46 @@
             box-shadow: 0 2px 4px rgba(243, 243, 243, 0.904);
             transition: .3s ease;
             z-index: 3000;
+
+            .menuLists {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                align-items: center;
+                margin: auto;
+                padding: 1rem 0;
+
+                .navItem {
+                    padding: 1rem;
+
+                    .menuLink {
+                        color: white;
+                        font-size: 15px;
+                        font-weight: 500;
+
+                        &:hover {
+                            color: var(--secHoverColor);
+                        }
+                    }
+                }
+            }
+
+            .closeNavbar {
+                color: white;
+                position: absolute;
+                top: 1rem;
+                right: 1.5rem;
+
+                .icon {
+                    font-size: 25px;
+                }
+
+                &:hover .icon {
+                    color: var(--secHoverColor);
+                }
+            }
         }
     }
+
 }
